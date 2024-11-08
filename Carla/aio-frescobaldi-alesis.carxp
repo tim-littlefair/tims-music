@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>LAPDOCK Analog Stereo:capture_FL</Source>
+   <Target>Carla:audio-in1</Target>
+  </Connection>
+  <Connection>
+   <Source>LAPDOCK Analog Stereo:capture_FR</Source>
+   <Target>Carla:audio-in2</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out1</Source>
+   <Target>Built-in Audio Analog Stereo:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out2</Source>
+   <Target>Built-in Audio Analog Stereo:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>qsynth:left</Source>
+   <Target>Built-in Audio Analog Stereo:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>qsynth:right</Source>
+   <Target>Built-in Audio Analog Stereo:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi-Bridge:Midi Through:(capture_0) Midi Through Port-0</Source>
+   <Target>qsynth:midi_00</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi-Bridge:Midi Through:(capture_0) Midi Through Port-0</Source>
+   <Target>Carla:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi-Bridge:Alesis V61 at usb-0000:00:14-0-4-2-4- full speed:(capture_0) V61 V61 In</Source>
+   <Target>qsynth:midi_00</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi-Bridge:Alesis V61 at usb-0000:00:14-0-4-2-4- full speed:(capture_1) V61 EDITOR In</Source>
+   <Target>qsynth:midi_00</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:events-out</Source>
+   <Target>Midi-Bridge:Midi Through:(playback_0) Midi Through Port-0</Target>
+  </Connection>
+ </ExternalPatchbay>
+</CARLA-PROJECT>
